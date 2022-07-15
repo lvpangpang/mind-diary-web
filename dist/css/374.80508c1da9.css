@@ -1,0 +1,64 @@
+.style__index--DttzJ6bE {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: url('https://static-venus.shandiantech.com/skio/20210806/1628237690633_login-bg.png');
+  background-size: cover;
+}
+.style__login_wrap--gsSwoZFx {
+  width: 380px;
+  margin-top: 180px;
+}
+.style__login_wrap--gsSwoZFx .style__title--C1DrMPga {
+  font-size: 33px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+}
+.style__login_wrap--gsSwoZFx .style__sub_title--_SHRymBl {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-top: 16px;
+}
+.style__login_wrap--gsSwoZFx .style__tip--aM_pk8t8 {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #1890ff;
+  text-align: center;
+  position: relative;
+}
+.style__login_wrap--gsSwoZFx .style__tip--aM_pk8t8::after {
+  position: absolute;
+  content: '';
+  width: 136px;
+  height: 2px;
+  background: #1890ff;
+  bottom: -8px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.style__login_wrap--gsSwoZFx .style__form--s1ZWTDg2 {
+  margin-top: 32px;
+}
+.style__login_wrap--gsSwoZFx .style__form--s1ZWTDg2 .style__code_but--k5pNCYvj {
+  display: block;
+  width: 100%;
+}
+.style__footer--exn2FFdH {
+  position: fixed;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  bottom: 30px;
+}
+

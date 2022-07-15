@@ -1,10 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider, message } from "antd";
 import zhCN from "antd/lib/locale-provider/zh_CN";
+import { configure } from 'mobx'
 import { http, getStorage } from "js-common-library";
 import "./index.less";
 import { logout } from "@/tools";
-
+configure({
+  enforceActions: 'never',
+})
 const { env } = __ENV__;
 http.setConfig({
   baseURL:

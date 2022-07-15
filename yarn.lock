@@ -7496,10 +7496,10 @@ webpack-merge@4.2.2:
   dependencies:
     lodash "^4.17.15"
 
-webpack-react-admin@2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/webpack-react-admin/-/webpack-react-admin-2.5.2.tgz#0f85301fc5a1cc7c99a789604dc615099638921a"
-  integrity sha512-LYUmI/IlYQddf9Eo/lJvETrC2kIfdoMwIpqeiOxGcOEEDf3muh2UNOhxtBv8ScvnvanwYOCMHBvXvXzU64ISKw==
+webpack-react-admin@2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/webpack-react-admin/-/webpack-react-admin-2.5.4.tgz#7671dd5d2a66d1207cea57614620ccc5f15e0822"
+  integrity sha512-ENeMYlST3jJB1/+QVTT+JDI3SzH6FGKsgbXwhjD4mwNR0IZeCKYiFLY8ecQXSqfZ/nZKcjERGgLw9gEjq9cQEQ==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/eslint-parser" "7.14.2"

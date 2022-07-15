@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmind_diary_web=self.webpackChunkmind_diary_web||[]).push([[397],{6397:(e,r,n)=>{n.r(r),n.d(r,{default:()=>a});var i=n(4186),s=n(953);var t=n(5893);const a=function(){return(0,t.jsxs)(i.G7,{children:["订单",(0,t.jsx)(s.Button,{type:"primary",children:"查询"})]})}}}]);
