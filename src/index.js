@@ -1,13 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider, message } from "antd";
-import zhCN from "antd/lib/locale-provider/zh_CN";
-import { configure } from 'mobx'
+import moment from 'moment'
+import 'moment/locale/zh-cn'
+import zhCN from "antd/lib/locale/zh_CN";
+import { configure } from "mobx";
 import { http, getStorage } from "js-common-library";
 import "./index.less";
 import { logout } from "@/tools";
+
+moment.locale("zh-cn");
 configure({
-  enforceActions: 'never',
-})
+  enforceActions: "never",
+});
 const { env } = __ENV__;
 http.setConfig({
   baseURL:
@@ -16,7 +20,7 @@ http.setConfig({
       : "https://qa01web-gateway.lingxichuxing.com",
   headers: {
     contextId: "dss",
-    'skio-token': getStorage('token')
+    "skio-token": getStorage("token"),
   },
   transformResult(res) {
     const { code, data, msg } = res || {};

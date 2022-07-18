@@ -1355,10 +1355,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antd-mobx-components@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/antd-mobx-components/-/antd-mobx-components-1.4.1.tgz#93b46a1755e1e2738838483061bf0e312148b539"
-  integrity sha512-fWwyORKmNg1Ebdm1GlqCyHJ5rGvPUXtu6oWBenCDCOT6oCMTnMCPD0jiBu7vTTlXNBLWCRtRgTXU//IWDp8zpA==
+antd-mobx-components@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/antd-mobx-components/-/antd-mobx-components-1.4.2.tgz#5ab58f64aad2b9746b4a30419865ffd6fd410f19"
+  integrity sha512-ZABzJLqUMYOvx6jijFJYkP4fG/wnlxZg+j0lkqr40Ej6JpzUuYg0pOzpXg16Lb4fIFh/2PEuNz6aXEfo7/p0SQ==
   dependencies:
     "@ant-design/icons" "4.7.0"
     antd "4.16.2"
@@ -4659,7 +4659,7 @@ mobx@6.3.2:
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.2.tgz#125590961f702a572c139ab69392bea416d2e51b"
   integrity sha512-xGPM9dIE1qkK9Nrhevp0gzpsmELKU4MFUJRORW/jqxVFIHHWIoQrjDjL8vkwoJYY3C2CeVJqgvl38hgKTalTWg==
 
-moment@^2.24.0, moment@^2.25.3:
+moment@^2.24.0, moment@^2.25.3, moment@^2.29.4:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
