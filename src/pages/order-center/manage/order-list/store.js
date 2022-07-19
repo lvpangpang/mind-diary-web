@@ -9,11 +9,6 @@ class Store {
   }
   $table = new TableStore({
     fetchList: async ({ pageSize, pageNum }) => {
-      console.log({
-        pageSize,
-        pageNum,
-        ...this.getParams(),
-      });
       const data = await http.get(API_OrderCenter.list, {
         params: { pageSize, pageNum, ...this.getParams() },
       });

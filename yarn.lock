@@ -1355,7 +1355,7 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antd-mobx-components@1.4.2:
+antd-mobx-components@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/antd-mobx-components/-/antd-mobx-components-1.4.2.tgz#5ab58f64aad2b9746b4a30419865ffd6fd410f19"
   integrity sha512-ZABzJLqUMYOvx6jijFJYkP4fG/wnlxZg+j0lkqr40Ej6JpzUuYg0pOzpXg16Lb4fIFh/2PEuNz6aXEfo7/p0SQ==
@@ -4187,10 +4187,10 @@ js-common-library@1.3.2:
   dependencies:
     axios "0.21.1"
 
-js-common-library@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/js-common-library/-/js-common-library-1.3.3.tgz#cb64489217dcad6f995b2ca1072ffa3cc8451241"
-  integrity sha512-5hq+SRxJXT73IlwvpnVxw2NwbKoVJhpvPbmPUuoSpLgR74/h2k8UvoKeCMX/IT3OyymajqpqHJYxCa25VNlXZw==
+js-common-library@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/js-common-library/-/js-common-library-1.3.4.tgz#38b96c03a609259409960f055ce26a3a0817f2d8"
+  integrity sha512-2O93usGQ/NMPke0Zq1DrHCSZp3guwPmXhUSJ+vbHQ/5vo1AYI88VJTKG53V6/z9hP0u9yUs5lbxNb8U4s1HZaQ==
   dependencies:
     axios "0.21.1"
 
@@ -7496,10 +7496,10 @@ webpack-merge@4.2.2:
   dependencies:
     lodash "^4.17.15"
 
-webpack-react-admin@2.5.4:
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/webpack-react-admin/-/webpack-react-admin-2.5.4.tgz#7671dd5d2a66d1207cea57614620ccc5f15e0822"
-  integrity sha512-ENeMYlST3jJB1/+QVTT+JDI3SzH6FGKsgbXwhjD4mwNR0IZeCKYiFLY8ecQXSqfZ/nZKcjERGgLw9gEjq9cQEQ==
+webpack-react-admin@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/webpack-react-admin/-/webpack-react-admin-2.6.1.tgz#ff4eb2fa56ad7eec012c5c5f8d56d280d371338b"
+  integrity sha512-nbjqsXo+uC2ywLaZVii6HUk1Q9TwbqVjARwXZiwOLYV0Hbt44pJybJrdBydx877lqxStre7RPNe3RNCWsmrMkg==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/eslint-parser" "7.14.2"

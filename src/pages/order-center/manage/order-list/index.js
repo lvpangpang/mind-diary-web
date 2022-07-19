@@ -12,7 +12,7 @@ function Index() {
     store.setLoading(true);
     message.info("正在导出,请稍等");
     try {
-      await http.exporter(API_OrderCenter.export, store.getParams());
+      await exporter(API_OrderCenter.export, store.getParams());
     } finally {
       store.setLoading(false);
     }

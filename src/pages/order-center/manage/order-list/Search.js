@@ -1,6 +1,4 @@
 import { Button, Input, DatePicker } from "antd";
-import moment from "moment";
-import 'moment/locale/zh-cn'
 import { observer } from "mobx-react-lite";
 import { Select, SearchBar } from "antd-mobx-components";
 import { getBaseType, isAuth } from "@/tools";
@@ -12,7 +10,6 @@ const { Option } = Select;
 function SearchForm(props) {
   const ORDER_STATUS = getBaseType("orderStatus");
   const ORDER_CANCEL_REASONS = getBaseType("orderCancelReason");
-  const CITIES = getBaseType("city");
   const ORDER_TYPES = getBaseType("orderType");
   const BUSINESS_TYPES = getBaseType("businessType");
   const ORDER_PROVIDERS = getBaseType("provider");
@@ -20,7 +17,6 @@ function SearchForm(props) {
   return (
     <SearchBar
       itemCol={{ span: 8 }}
-      showAdvancedLimit={9}
       store={store}
       initialValues={{
         gainOrderSuccess: "1"
