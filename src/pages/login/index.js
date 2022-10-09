@@ -52,7 +52,7 @@ function Index() {
         </div>
       </Form>
       <footer className={styles.footer}>
-        ©2022 Created by lingxichuxing, All Rights Reserved.
+        ©2022 Created by lvfeifei, All Rights Reserved.
       </footer>
     </div>
   );

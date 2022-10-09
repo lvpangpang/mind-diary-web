@@ -1,48 +1,37 @@
-import { Button, Input, DatePicker } from "antd";
-import { observer } from "mobx-react-lite";
-import { Select, SearchBar } from "antd-mobx-components";
-import { getBaseType, isAuth } from "@/tools";
-import store from "./store";
+import { Input, DatePicker } from "antd"
+import { observer } from "mobx-react-lite"
+import { Select, SearchBar, Export } from "antd-mobx-components"
+import { isAuth } from "@/tools"
+import store from "./store"
+import Api from "./Api"
 
-const { Item } = SearchBar;
-const { Option } = Select;
+const { Item } = SearchBar
+const { Option } = Select
 
-function SearchForm(props) {
-  const ORDER_STATUS = getBaseType("orderStatus");
-  const ORDER_CANCEL_REASONS = getBaseType("orderCancelReason");
-  const ORDER_TYPES = getBaseType("orderType");
-  const BUSINESS_TYPES = getBaseType("businessType");
-  const ORDER_PROVIDERS = getBaseType("provider");
-  const BRAND = getBaseType("brand");
+function SearchForm() {
   return (
     <SearchBar
       itemCol={{ span: 8 }}
       store={store}
       initialValues={{
-        gainOrderSuccess: "1"
+        gainOrderSuccess: "1",
       }}
       extra={[
         isAuth("ordersExport") && (
-          <Button
-            key="1"
-            onClick={props.handleExport}
-            type="primary"
-            loading={store.loading}
+          <Export
+            name="订单.xlsx"
+            getBlob={() =>
+              Api.export({
+                params: { ...store.getParams() },
+                responseType: "blob",
+                transformResult(res) {
+                  return res.data
+                },
+              })
+            }
           >
             导出
-          </Button>
-        ),
-
-        isAuth("ordersLargeExport") && (
-          <Button key="2" onClick={props.handleLargeExport} type="primary">
-            大数据导出
-          </Button>
-        ),
-
-        isAuth("ordersLargeExportPage") && (
-          <Button key="3" onClick={props.handleExportResult}>
-            查询导出结果
-          </Button>
+          </Export>
         ),
       ]}
     >
@@ -50,10 +39,7 @@ function SearchForm(props) {
         <Input />
       </Item>
       <Item label="订单状态" name="orderStatusList">
-        <Select showAll options={ORDER_STATUS} mode="multiple" />
-      </Item>
-      <Item label="取消类型" name="cancelTypeList">
-        <Select showAll options={ORDER_CANCEL_REASONS} mode="multiple" />
+        <Select showAll type="orderStatus" mode="multiple" />
       </Item>
       <Item label="司机姓名" name="driverName">
         <Input />
@@ -65,7 +51,7 @@ function SearchForm(props) {
         <DatePicker.RangePicker format="YYYY-MM-DD HH:mm:ss" showTime />
       </Item>
       <Item label="城市" name="cityCode">
-        <Select type="city" />
+        <Select showAll type="city" />
       </Item>
       <Item label="仅抢单成功" name="gainOrderSuccess">
         <Select>
@@ -78,7 +64,7 @@ function SearchForm(props) {
         </Select>
       </Item>
       <Item label="品牌" name="brandNoList">
-        <Select mode="multiple" options={BRAND} />
+        <Select mode="multiple" type="brand" />
       </Item>
       <Item label="行程录音" name="tapeFlag">
         <Select>
@@ -87,9 +73,7 @@ function SearchForm(props) {
           <Option value="0">无</Option>
         </Select>
       </Item>
-      <Item label="业务类型" name="businessType">
-        <Select showAll options={BUSINESS_TYPES} />
-      </Item>
+
       <Item label="流量方订单号" name="providerOrderNo">
         <Input />
       </Item>
@@ -108,12 +92,7 @@ function SearchForm(props) {
       <Item label="订单终点" name="endAddr">
         <Input />
       </Item>
-      <Item label="订单类型" name="orderType">
-        <Select showAll options={ORDER_TYPES} />
-      </Item>
-      <Item label="业务模块" name="providerNo">
-        <Select showAll options={ORDER_PROVIDERS} />
-      </Item>
+
       <Item label="有无改价" name="altered">
         <Select>
           <Option key="" value="">
@@ -167,6 +146,6 @@ function SearchForm(props) {
         </Select>
       </Item>
     </SearchBar>
-  );
+  )
 }
-export default observer(SearchForm);
+export default observer(SearchForm)

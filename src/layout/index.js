@@ -28,7 +28,6 @@ function Index({ children }) {
       isLogin={() => getStorage("token")}
       provider={{ baseTypes, userInfo }}
     >
-      <BackTop />
       <AppLayout
         logo="平台管理系统"
         menuConfig={userInfo.menus}

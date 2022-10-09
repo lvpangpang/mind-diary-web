@@ -1,7 +1,7 @@
 {
   "name": "mind-diary-web",
   "version": "1.0.0",
-  "description": "吕肥肥的日记-管理系统",
+  "description": "比特币投资日记管理系统",
   "main": "index.js",
   "scripts": {
     "start": "webpack-react-admin start env=local",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/lvpangpang/mind-diary-web#readme",
   "devDependencies": {
-    "webpack-react-admin": "^2.6.1"
+    "webpack-react-admin": "^3.0.1"
   },
   "dependencies": {
     "antd": "4.16.11",

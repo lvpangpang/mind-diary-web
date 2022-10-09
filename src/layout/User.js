@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { observer } from "mobx-react-lite";
-import { logout } from "@/tools";
+import { loginOut } from "@/tools";
 import { Popover, Typography, Button } from "antd";
 import { useAppInfo } from "antd-mobx-components";
 import styles from "./style.less";
@@ -44,7 +44,7 @@ function Index() {
             <span>角色：</span>
             <span>{roleNameDisplays.join("、")}</span>
           </div>
-          <Button type="primary" onClick={logout} block>
+          <Button type="primary" onClick={loginOut} block>
             退出
           </Button>
         </div>
