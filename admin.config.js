@@ -4,5 +4,5 @@ module.exports = {
   useFileRouter: true,
   port: 3008,
   bmsLib: true,
-  publicPath: '/test-web'
+  publicPath: '/test-web/'
 } 

@@ -1,21 +1,23 @@
-import { Input, Form, Button } from "antd";
-import { setStorage } from "js-common-library";
-import styles from "./style.less";
-import Api from "./Api";
+import { Input, Form, Button } from "antd"
+import { setStorage } from "js-common-library"
+import styles from "./style.less"
+import Api from "./Api"
 
-const { Item } = Form;
+const { Item } = Form
+
+const { env } = __ENV__
 
 function Index() {
+  const [form] = Form.useForm()
 
-  const [form] = Form.useForm();
-  
   const login = () => {
     form.validateFields().then(async (values) => {
-      const { token } = await Api.login(values);
-      setStorage("token", token);
-      window.location.href = "/";
-    });
-  };
+      const { token } = await Api.login(values)
+      setStorage("token", token)
+      const url = env === "local" ? "/" : "/test-web"
+      window.location.href = url
+    })
+  }
 
   return (
     <div className={styles.index}>
@@ -55,6 +57,6 @@ function Index() {
         ©2022 Created by lvfeifei, All Rights Reserved.
       </footer>
     </div>
-  );
+  )
 }
-export default Index;
+export default Index
