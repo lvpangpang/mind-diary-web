@@ -4,7 +4,6 @@ import styles from "./style.less"
 import Api from "./Api"
 
 const { Item } = Form
-
 const { env } = __ENV__
 
 function Index() {
@@ -14,7 +13,7 @@ function Index() {
     form.validateFields().then(async (values) => {
       const { token } = await Api.login(values)
       setStorage("token", token)
-      const url = env === "local" ? "/" : "/test-web"
+      const url = env === "local" ? "/" : "/mind-diary-web"
       window.location.href = url
     })
   }

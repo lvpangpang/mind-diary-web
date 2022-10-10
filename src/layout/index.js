@@ -28,7 +28,7 @@ function Index({ children }) {
       id={userInfo.id}
       isLogin={() => getStorage("token")}
       provider={{ baseTypes, userInfo }}
-      loginUrl={env === "local" ? "/login" : "/test-web/login"}
+      loginUrl={env === "local" ? "/login" : "/mind-diary-web/login"}
     >
       <AppLayout
         logo="平台管理系统"

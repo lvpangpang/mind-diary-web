@@ -14,7 +14,7 @@ http.setConfig({
   baseURL:
     env === "local"
       ? "https://qa01web-gateway.lingxichuxing.com"
-      : "https://web-gateway.lingxichuxing.com",
+      : "https://qa01web-gateway.lingxichuxing.com",
   headers: {
     contextId: "dss",
     "skio-token": getStorage("token"),
@@ -41,7 +41,7 @@ http.setConfig({
 
 function Index({ children }) {
   return (
-    <BrowserRouter basename={env === "local" ? "/" : "/test-web"}>
+    <BrowserRouter basename={env === "local" ? "/" : "/mind-diary-web"}>
       <ConfigProvider locale={zhCN}>{children}</ConfigProvider>
     </BrowserRouter>
   )
