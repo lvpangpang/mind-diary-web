@@ -19,6 +19,7 @@ function SearchForm() {
       extra={[
         isAuth("ordersExport") && (
           <Export
+            key="0"
             name="订单.xlsx"
             getBlob={() =>
               Api.export({

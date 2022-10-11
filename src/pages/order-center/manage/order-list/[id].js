@@ -1,21 +1,16 @@
-import { useRef, useState } from "react"
-import { Card } from "antd"
+import { Card, Form } from "antd"
 import { View, Image, Upload, Button } from "antd-mobx-components"
 import Api from "./Api"
 
 const { PreviewGroup } = Image
+const { Item } = Form
 
 function Index() {
-  const ref = useRef()
+  const [form] = Form.useForm()
 
-  const [value, setValue] = useState([
-    {
-      name: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-      url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    },
-  ])
-  const onChange = (fileList) => {
-    setValue(fileList)
+  const submit = async () => {
+    const res = await form.validateFields()
+    console.log(res)
   }
 
   return (
@@ -34,26 +29,35 @@ function Index() {
       </Card>
 
       <Card title="Upload 测试demo">
-        <Upload
-          ref={ref}
-          value={value}
-          onChange={onChange}
-          dirname="driver"
-          accept="image/png, image/jpeg"
-          getOSSConfig={Api.getConfig}
-          maxCount={1}
-          imgLimit={{
-            maxWidth: 1000,
-          }}
-        ></Upload>
-        <br />
-        <Button
-          type="primary"
-          onClick={() => {
-            console.log(value)
-          }}
-        >
-          获取上传文件对象
+        <Form form={form}>
+          <Item
+            name="uploadImg"
+            label="备注图片"
+            extra={"图片最多可添加2张，大小不得大于4M，支持jpg、png、jpeg格式"}
+            rules={[
+              {
+                required: true,
+                message: "请上传图片",
+              },
+            ]}
+            initialValue={[
+              {
+                name: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+              },
+            ]}
+          >
+            <Upload
+              getOSSConfig={Api.getConfig}
+              maxCount={2}
+              maxSize={4 * 1024 * 1024}
+              dirname="driver"
+              accept="image/jpg, image/png, image/jpeg"
+            />
+          </Item>
+        </Form>
+        <Button type="primary" onClick={submit}>
+          提交处理
         </Button>
       </Card>
     </View>
