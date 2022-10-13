@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, Redirect } from "react-router-dom"
 import { BackTop } from "antd"
 import { App, AppLayout } from "antd-mobx-components"
 import { getStorage } from "js-common-library"
 import Api from "./Api"
 import User from "./User"
-const { env } = __ENV__
 
 function Index({ children }) {
   const [userInfo, setUserInfo] = useState({})
@@ -14,6 +13,10 @@ function Index({ children }) {
 
   if (pathname.indexOf("/login") === 0) {
     return children
+  }
+
+  if(!getStorage('token')) {
+    return <Redirect to="/login"></Redirect>
   }
 
   useEffect(async () => {
@@ -26,9 +29,7 @@ function Index({ children }) {
   return (
     <App
       id={userInfo.id}
-      isLogin={() => getStorage("token")}
       provider={{ baseTypes, userInfo }}
-      loginUrl={env === "local" ? "/login" : "/mind-diary-web/login"}
     >
       <AppLayout
         logo="平台管理系统"

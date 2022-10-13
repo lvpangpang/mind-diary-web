@@ -1613,10 +1613,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antd-mobx-components@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/antd-mobx-components/-/antd-mobx-components-2.0.1.tgz#1f12c55be1c9427c48935941bb86f86b9260ef21"
-  integrity sha512-ENheg8IyegJ19efhs/YAGAc7sIi2HF9cUuUCPjhh1f9InPOPdPBjmeDZ04oyr27xVbWtffG6nI2SbBgzV+zhJQ==
+antd-mobx-components@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/antd-mobx-components/-/antd-mobx-components-2.0.2.tgz#920235d3d0d995ae16b9dac0b45574518c6efa1f"
+  integrity sha512-CdqfIAPztEXwW9cLJT+47zSDanImnIx2/QXX0Er3oO7F792lOUI52iSL2v0L2tvMRIUIQJ5Jv4EfrVQrfrxM5A==
   dependencies:
     "@ant-design/icons" "4.7.0"
     antd "4.23.5"
