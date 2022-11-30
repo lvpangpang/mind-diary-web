@@ -1,5 +1,5 @@
 module.exports = {
-  title: "btc日记管理系统",
+  title: "平台管理系统",
   icon: "https://www.lvpangpang.com/index.ico",
   useFileRouter: true,
   port: 3008,
