@@ -1,4 +1,4 @@
 # mind-diary-web
-吕肥肥的日记-管理系统
+平台管理系统-react版
 
-[线上地址](https://www.lvpangpang.com/test-web/)
+[项目地址](https://www.lvpangpang.com/mind-diary-web)
