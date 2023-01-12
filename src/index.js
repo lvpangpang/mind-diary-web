@@ -5,6 +5,7 @@ import { configure } from "mobx"
 import { http, getStorage } from "js-common-library"
 import "./index.less"
 import { loginOut } from "@/tools"
+import 'antd/dist/antd.variable.min.css'
 
 configure({
   enforceActions: "never",

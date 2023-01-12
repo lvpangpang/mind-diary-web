@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useLocation, Redirect } from "react-router-dom"
-import { BackTop } from "antd"
+import { BackTop, ConfigProvider } from "antd"
 import { App, AppLayout } from "antd-mobx-components"
 import { getStorage } from "js-common-library"
 import Api from "./Api"
@@ -22,6 +22,11 @@ function Index({ children }) {
   useEffect(async () => {
     const userInfo = await Api.getUserInfo()
     const dataTypes = await Api.getDataTypes()
+    ConfigProvider.config({
+      theme: {
+        primaryColor: 'green' // 可以根据不同品牌配置不同主题颜色
+      },
+    });
     setUserInfo(userInfo)
     setBaseType(dataTypes)
   }, [])

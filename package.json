@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/lvpangpang/mind-diary-web#readme",
   "devDependencies": {
-    "webpack-react-admin": "^3.0.1"
+    "webpack-react-admin": "^3.0.3"
   },
   "dependencies": {
     "antd": "^4.23.5",
